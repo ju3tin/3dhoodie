@@ -142,7 +142,7 @@ var App = function(makehuman, dat, _, THREE, Detector, Nanobar, Stats) {
         this.human.proxies.toggleProxy('eyebrow010',true)
         var randomHair = _.sample(['Braid01', 'blondwithheadband', 'ponytail01', 'bob02'])
         this.human.proxies.toggleProxy(randomHair,true)
-        this.human.proxies.toggleProxy('makehuman/proxies/eyes/Low-Poly/Low-Poly.json#brown',true)
+        this.human.proxies.toggleProxy('data/proxies/eyes/Low-Poly/Low-Poly.json#brown',true)
 
         // lets set the color to be a mixed/average skin color
         this.human.mesh.material.materials[0].color = new THREE.Color(0.6451834425332652, 0.541358126188251, 0.46583313890034395)
