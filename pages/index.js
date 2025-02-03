@@ -19,18 +19,18 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="/index3.html" className={styles.card}>
             <h3>Test Case &rarr;</h3>
             <p>This is a 3D place to move your character</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="/studio/index.html" className={styles.card}>
             <h3>3D Character &rarr;</h3>
             <p>This is an area for you to update your character</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="/builder/index.html"
             className={styles.card}
           >
             <h3>3D Playground &rarr;</h3>
@@ -38,7 +38,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="/feedback.html"
             className={styles.card}
           >
             <h3>Feedback &rarr;</h3>
@@ -51,7 +51,7 @@ export default function Home() {
 
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
