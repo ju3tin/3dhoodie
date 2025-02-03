@@ -118,7 +118,7 @@ var App = function(makehuman, dat, _, THREE, Detector, Nanobar, Stats) {
 
             // load targets last as it's slow
             // (it loads a ~150mb bin files with targets)
-            self.human.loadTargets(`${self.resources.baseUrl}targetq/${self.resources.targets}`).then(() => {
+            self.human.loadTargets(`/js/makehuman/targets/${self.resources.targets}`).then(() => {
                 self.setModifierDefaults()
 
                 self.nanobar.go(90)
