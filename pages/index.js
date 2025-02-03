@@ -25,7 +25,7 @@ export default function Home() {
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
+            <h3>3D Character &rarr;</h3>
             <p>This is an area for you to update your character</p>
           </a>
 
@@ -41,9 +41,9 @@ export default function Home() {
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Feedback &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+             Form To Tell Me What you Are Looking For
             </p>
           </a>
         </div>
