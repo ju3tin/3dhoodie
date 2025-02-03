@@ -23,7 +23,7 @@
     <script src="/js/node_modules/Projector.js"></script>
     <script src="/js/node_modules/Detector.js"></script>
     <script src="/js/node_modules/makehuman.js" charset="utf-8"></script>
-    <script src="/js/main12.js" charset="utf-8"></script>
+    <script src="/js/main1a.js" charset="utf-8"></script>
     <script type="text/javascript">
 
     var app
@@ -48,12 +48,6 @@
             key = keys[i]
             window[key]=data[i]
         }
-        
-        // Debugging output to check vertices and targets
-        console.log("Modeling Sliders:", modeling_sliders);
-        console.log("Resources:", resources);
-        console.log("Number of vertices:", resources.vertices.length);
-        console.log("Number of targets:", resources.targets.length);
     })
     .then(() => {
         // start the app
