@@ -6,22 +6,22 @@
     "start": "next start"
   },
   "dependencies": {
-  "file-saver": "^1.3.3",
-    "http-server": "^0.10.0",
-    "lodash": "^4.5.1",
-    "makehuman-js": "^0.1.3",
-    "nanobar": "^0.2.1",
-    "stats.js": "0.0.14-master",
     "@loaders.gl/gltf": "^4.3.2",
     "autoprefixer": "^10.4.20",
+    "file-saver": "^1.3.3",
+    "http-server": "^0.10.0",
+    "lodash": "^4.5.1",
+    "makehuman-data": "0.0.2",
+    "makehuman-js": "^0.1.3",
+    "nanobar": "^0.2.1",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "stats.js": "0.0.14-master",
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.4.15",
     "three": "^0.82.1",
-    "tween": "^0.9.0",
-    "makehuman-data": "0.0.2"
+    "tween": "^0.9.0"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
