@@ -56,7 +56,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/media/nff_logo.jpg" alt="Vercel" className={styles.logo} />
+          <img src="/media/nff_logo.jpg" alt="Never Fade Factory" className={styles.logo} />
         </a>
       </footer>
 
