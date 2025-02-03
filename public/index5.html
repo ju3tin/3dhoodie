@@ -48,6 +48,12 @@
             key = keys[i]
             window[key]=data[i]
         }
+        
+        // Debugging output to check vertices and targets
+        console.log("Modeling Sliders:", modeling_sliders);
+        console.log("Resources:", resources);
+        console.log("Number of vertices:", resources.vertices.length);
+        console.log("Number of targets:", resources.targets.length);
     })
     .then(() => {
         // start the app
