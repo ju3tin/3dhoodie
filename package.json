@@ -12,7 +12,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind": "^4.0.0",
-    "tailwindcss": "^3.4.15"
+    "tailwindcss": "^3.4.15",
+    "three": "^0.82.1",
+    "tween": "^0.9.0",
+    "makehuman-data": "0.0.2"
   },
   "engines": {
     "node": ">=18"
