@@ -203,7 +203,6 @@ var App = function(makehuman, dat, _, THREE, Detector, Nanobar, Stats) {
             // load: JSON
         });
 
-        this.setupModifiersGUI();
         this.setupPoseGUI();
         this.setupProxyGUI();
         this.setupSkinGUI();
@@ -303,23 +302,7 @@ var App = function(makehuman, dat, _, THREE, Detector, Nanobar, Stats) {
             }
             // also randomise pose and wardrobe?
         };
-        modifierGui.add(this, 'randomizeModifiers');
-
-        this.resetModifiers = function() {
-            self.human.modifiers.reset();
-
-            var modifiers = self.human.modifiers.children;
-            for (var name in modifiers) {
-                if (modifiers.hasOwnProperty(name)) {
-                    // set defaults
-                    var _modifier2 = modifiers[name];
-                    self.modifierConfig[_modifier2.name] = _modifier2.getValue();
-                }
-            }
-        };
-        modifierGui.add(this, 'resetModifiers');
-
-        modifierGui.open();
+    
     }
     
     GUI.prototype.setupIOGUI = function () {
@@ -380,54 +363,10 @@ var App = function(makehuman, dat, _, THREE, Detector, Nanobar, Stats) {
     }
 
     /** Set up controls using dat-gui **/
-    GUI.prototype.setupSkinGUI = function() {
-        var self = this;
-        var skinNames = this.app.resources.skins
 
-        this.skinConfig = {
-            Skin: skinNames[0]
-        };
-        this.gui.remember(this.skinConfig);
-
-        this.gui.add(self.skinConfig, 'Skin', skinNames).onChange(function(skin) {
-            self.human.setSkin(skin);
-        });
-    }
 
     /** Set up a dat-gui panel to change opacity of parts of the body mesh **/
-    GUI.prototype.setupBodyPartGUI = function() {
-        var self = this;
-        var bodyPart;
-
-        var bodyPartGui = this.gui.addFolder("BodyParts");
-        var bodyPartNames = _.map(this.human.mesh.material.materials, 'name');
-
-        this.bodyPartConfig = {};
-        for (var i = 0; i < bodyPartNames.length; i++) {
-            bodyPart = bodyPartNames[i];
-            this.bodyPartConfig[bodyPart] = 0;
-        }
-        var bodyName = Object.keys(this.bodyPartConfig)[0]
-        this.bodyPartConfig[bodyName] = 1;
-
-        this.gui.remember(this.bodyPartConfig);
-
-        for (var k = 0; k < bodyPartNames.length; k++) {
-            bodyPart = bodyPartNames[k];
-            bodyPartGui.add(this.bodyPartConfig, bodyPart).max(1).min(0).step(0.1).onChange(function(o) {
-                // var o = this.bodyPartConfig[bodyPart];
-                self.human.bodyPartOpacity(o, this.property);
-            });
-        }
-
-        this.bodyPartConfig = {};
-        for (var j = 0; j < bodyPartNames.length; j++) {
-            bodyPart = bodyPartNames[j];
-            this.bodyPartConfig[bodyPart] = 0.0;
-        }
-        this.bodyPartConfig['body'] = 1;
-        this.bodyPartConfig[self.human.mesh.material.materials[0].name] = 1;
-    }
+  
 
     return App;
 }(makehuman, dat, _, THREE, Detector, Nanobar, Stats);

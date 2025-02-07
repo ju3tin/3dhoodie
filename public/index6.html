@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Player One UX with FBX Model</title>
+    <link rel="stylesheet" href="styles3d.css">
+    <style>
+        body { margin: 0; overflow: hidden; }
+        .background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: black; }
+        .main-content { position: absolute; top: 30%; left: 50%; transform: translateX(-50%); color: white; text-align: center; z-index: 10; }
+        .action-button { font-size: 1.5rem; padding: 15px 30px; background-color: #00ff00; border: none; border-radius: 8px; color: #000; cursor: pointer; }
+        .action-button:hover { background-color: #ff00ff; color: #fff; }
+        #fbxContainer { width: 100%; height: 50vh; }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+    
+    <!-- Space for FBX Model -->
+    <div id="fbxContainer"></div>
+
+    <div class="main-content">
+        <h1>Ready Player One</h1>
+        <button class="action-button" onclick="startGame()">Start Adventure</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/FBXLoader.js"></script>
+    <script src="script3d.js"></script>
+
+</body>
+</html>
