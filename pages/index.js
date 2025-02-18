@@ -24,7 +24,7 @@ export default function Home() {
             <p>This is a 3D place to move your character</p>
           </a>
 
-          <a href="/studio/index.html" className={styles.card}>
+          <a href="/index5.html" className={styles.card}>
             <h3>3D Character &rarr;</h3>
             <p>This is an area for you to update your character</p>
           </a>
