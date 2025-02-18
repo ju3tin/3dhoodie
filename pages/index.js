@@ -30,7 +30,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/builder/index.html"
+            href="/editor/index.html"
             className={styles.card}
           >
             <h3>3D Playground &rarr;</h3>
