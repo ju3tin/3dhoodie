@@ -22,23 +22,27 @@ export default function Page() {
             renderer.setSize(window.innerWidth, window.innerHeight)
         })
 
-        const fullscreenIcon = document.getElementById('fullscreenIcon')
-        if (fullscreenIcon) {
-            fullscreenIcon.addEventListener('pointerup', () => {
-                if (renderer.domElement.requestFullscreen) {
-                    renderer.domElement.requestFullscreen()
-                } else if (renderer.domElement.webkitRequestFullscreen) {
-                    /* Safari */
-                    renderer.domElement.webkitRequestFullscreen()
-                } else if (renderer.domElement.msRequestFullscreen) {
-                    /* IE11 */
-                    renderer.domElement.msRequestFullscreen()
-                }
-            })
-        }
+        const canvasElement = renderer.domElement as HTMLCanvasElement;
 
-        const controls = new OrbitControls(camera, renderer.domElement)
-        controls.enableDamping = true
+        // Define orbitControls here
+        const orbitControls = new OrbitControls(camera, canvasElement);
+        orbitControls.enableDamping = true;
+        orbitControls.minDistance = 5;
+
+        if (canvasElement) {
+            const fullscreenIcon = document.getElementById('fullscreenIcon');
+            if (fullscreenIcon) {
+                fullscreenIcon.addEventListener('pointerup', () => {
+                    if (canvasElement.requestFullscreen) {
+                        canvasElement.requestFullscreen();
+                    } else if (canvasElement.webkitRequestFullscreen) {
+                        canvasElement.webkitRequestFullscreen();
+                    } else if (canvasElement.msRequestFullscreen) {
+                        canvasElement.msRequestFullscreen();
+                    }
+                });
+            }
+        }
 
         const cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshNormalMaterial({ wireframe: true }))
         scene.add(cube)
@@ -54,7 +58,7 @@ export default function Page() {
             cube.rotation.x += delta
             cube.rotation.y += delta
 
-            controls.update()
+            orbitControls.update()
 
             renderer.render(scene, camera)
         }
