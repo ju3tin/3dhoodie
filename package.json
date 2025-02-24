@@ -7,9 +7,13 @@
   },
   "dependencies": {
     "@loaders.gl/gltf": "^4.3.2",
+    "@react-three/drei": "^10.0.1",
+    "@react-three/fiber": "^9.0.4",
+    "@react-three/rapier": "^1.5.0",
     "autoprefixer": "^10.4.20",
     "file-saver": "^1.3.3",
     "http-server": "^14.1.1",
+    "leva": "^0.10.0",
     "lodash": "^4.5.1",
     "makehuman-data": "0.0.2",
     "makehuman-js": "^0.1.3",
