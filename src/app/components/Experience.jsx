@@ -42,7 +42,7 @@ export const Experience = () => {
   const shadowCameraRef = useRef();
   const { map } = useControls("Map", {
     map: {
-      value: "city1",
+      value: "city_scene_tokyo",
       options: Object.keys(maps),
     },
   });
