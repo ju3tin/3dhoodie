@@ -16,9 +16,9 @@ const maps = {
     scale: 3,
     position: [-6, -7, 0],
   },
-  city: {
-    scale: 10,
-    position: [10, -7, 0],
+  city1: {
+    scale: 1,
+    position: [0, -13, 10],
   },
   animal_crossing_map: {
     scale: 20,
@@ -42,7 +42,7 @@ export const Experience = () => {
   const shadowCameraRef = useRef();
   const { map } = useControls("Map", {
     map: {
-      value: "city",
+      value: "city1",
       options: Object.keys(maps),
     },
   });
